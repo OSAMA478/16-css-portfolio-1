@@ -1,0 +1,251 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	height: 100vh;
+	background: #eeeeee;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+	text-decoration: none;
+
+	color: rgb(255, 255, 255);
+}
+/* -------------navbar styling--------------- */
+nav ul {
+	list-style-type: none;
+
+	gap: 50px;
+
+	margin: 0 20px 0 0;
+
+	font-size: 28px;
+	font-weight: 500;
+	font-family: poppins;
+
+	display: flex;
+	align-items: center;
+}
+
+nav {
+	background: #be3144;
+
+	position: fixed;
+	inset: 0 0 90% 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	z-index: 1;
+}
+
+/* ----------welcome section styling---------- */
+
+#welcome-section {
+	height: 100vh;
+	background: rgb(58, 58, 58);
+
+	display: grid;
+	place-content: center;
+
+	text-align: center;
+	color: white;
+	font-family: poppins;
+	font-size: 32px;
+}
+
+#welcome-section p {
+	color: #be3144;
+}
+
+#welcome-section h1 {
+	font-family: "Courier New", Courier, monospace;
+
+	position: relative;
+}
+
+#welcome-section a {
+	width: 300px;
+	margin: 0 auto;
+	padding: 10px;
+
+	position: relative;
+}
+#welcome-section a:after {
+	content: "";
+	width: 0px;
+	height: 3px;
+
+	background-color: #45567d;
+
+	transition: 0.5s;
+
+	position: absolute;
+
+	top: 80%;
+	left: 18%;
+}
+#welcome-section a:hover::after {
+	width: 195px;
+}
+
+/*----------------project section styling.------- */
+
+#projects {
+	background: #45567d;
+	padding: 30px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+h2 {
+	margin: 50px;
+
+	font-size: 32px;
+	font-family: poppins;
+	color: #ffffff;
+}
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 4rem;
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	margin-bottom: 6rem;
+}
+
+.projects-grid a {
+	width: 80%;
+	margin: 0 auto;
+
+	background: #303841;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.projects-grid a img {
+	width: 100%;
+}
+
+.projects-grid a p {
+	text-align: center;
+}
+
+.btn {
+	background: #303841;
+
+	padding: 10px;
+
+	font-size: x-large;
+}
+
+/* ----------achivments----------- */
+
+#achivments {
+	adding: 30px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#achivments h2 {
+	margin: 80px;
+	color: #303841;
+	text-align: center;
+}
+
+/* --------contact---------- */
+
+#contact {
+	height: 100vh;
+
+	background: #303841;
+
+	text-align: center;
+	color: #ffffff;
+	font-size: x-large;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+footer {
+	font-weight: 300;
+	color: #ffffff;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 2rem;
+	background: #303841;
+	border-top: 5px solid #be3144;
+}
+
+footer > p {
+	margin: 2rem;
+}
+
+footer i {
+	vertical-align: middle;
+}
+
+@keyframes typewriter {
+	to {
+		position: absolute;
+		left: 100%;
+	}
+}
+@keyframes blink {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@media (max-width: 800px) {
+	footer {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.contact-links a {
+		display: block;
+	}
+}
+
+@media (max-width: 320px) {
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		overflow: scroll;
+	}
+	ul {
+		display: flex;
+		/* flex-direction: column; */
+		height: 10vh;
+	}
+}

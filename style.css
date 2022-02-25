@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	height: 100vh;
 	background: #eeeeee;
@@ -42,6 +46,8 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+
+	z-index: 1;
 }
 
 /* ----------welcome section styling---------- */
